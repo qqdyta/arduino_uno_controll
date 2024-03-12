@@ -50,7 +50,7 @@ void loop() {
 
     }else if (data == 'B') {
         digitalWrite(3, HIGH);
-        Serial.println('CH31OK');
+        Serial.println("CH31OK");
 
     }else if (data == 'b'){
         digitalWrite(3, LOW);
