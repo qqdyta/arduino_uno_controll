@@ -203,6 +203,8 @@ void loop() {
         digitalWrite(4, HIGH);
         Serial.println("CH7OK");
 
+    }else if ( data == 'AT'){
+        Serial.println("OK");
     }
 }
 
