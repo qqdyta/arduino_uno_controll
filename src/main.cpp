@@ -42,51 +42,51 @@ void loop() {
 
     if (data == 'A') {
         digitalWrite(2, HIGH);
-        Serial.println("CH01OK");
+        Serial.println("CH21OK");
 
     }else if (data == 'a'){
         digitalWrite(2, LOW);
-        Serial.println("CH00OK");
+        Serial.println("CH20OK");
 
     }else if (data == 'B') {
         digitalWrite(3, HIGH);
-        Serial.println('CH11OK');
+        Serial.println('CH31OK');
 
     }else if (data == 'b'){
         digitalWrite(3, LOW);
-        Serial.println("CH10OK");
+        Serial.println("CH30OK");
 
     }else if (data == 'C') {
         digitalWrite(4, HIGH);
-        Serial.println("CH21OK");
+        Serial.println("CH41OK");
 
     }else if (data == 'c'){
         digitalWrite(4, LOW);
-        Serial.println("CH20OK");
+        Serial.println("CH40OK");
 
     }else if (data == 'D') {
         digitalWrite(5, HIGH);
-        Serial.println("CH31OK");
+        Serial.println("CH51OK");
 
     }else if (data == 'd'){
         digitalWrite(5, LOW);
-        Serial.println("CH30OK");
+        Serial.println("CH50OK");
 
     }else if (data == 'E') {
         digitalWrite(6, HIGH);
-        Serial.println("CH41OK");
+        Serial.println("CH61OK");
 
     }else if (data == 'e'){
         digitalWrite(6, LOW);
-        Serial.println("CH40OK");
+        Serial.println("CH60OK");
 
     }else if (data == 'F') {
         digitalWrite(7, HIGH);
-        Serial.println("CH5OK");
+        Serial.println("CH71OK");
 
     }else if (data == 'f'){
         digitalWrite(7, LOW);
-        Serial.println("CH50OK");
+        Serial.println("CH70OK");
 
     }else if (data == 'G') {
         digitalWrite(8, HIGH);
