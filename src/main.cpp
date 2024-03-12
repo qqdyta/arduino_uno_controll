@@ -66,77 +66,77 @@ void loop() {
 
     }else if (data == 'D') {
         digitalWrite(5, HIGH);
-        Serial.println("31OK");
+        Serial.println("CH31OK");
 
     }else if (data == 'd'){
         digitalWrite(5, LOW);
-        Serial.println("30OK");
+        Serial.println("CH30OK");
 
     }else if (data == 'E') {
         digitalWrite(6, HIGH);
-        Serial.println("41OK");
+        Serial.println("CH41OK");
 
     }else if (data == 'e'){
         digitalWrite(6, LOW);
-        Serial.println("40OK");
+        Serial.println("CH40OK");
 
     }else if (data == 'F') {
         digitalWrite(7, HIGH);
-        Serial.println("5OK");
+        Serial.println("CH5OK");
 
     }else if (data == 'f'){
         digitalWrite(7, LOW);
-        Serial.println("50OK");
+        Serial.println("CH50OK");
 
     }else if (data == 'G') {
         digitalWrite(8, HIGH);
-        Serial.println("81OK");
+        Serial.println("CH81OK");
 
     }else if (data == 'g'){
         digitalWrite(8, LOW);
-        Serial.println("80OK");
+        Serial.println("CH80OK");
 
     }else if (data == 'H') {
         digitalWrite(9, HIGH);
-        Serial.println("91OK");
+        Serial.println("CH91OK");
 
     }else if (data == 'h'){
         digitalWrite(9, LOW);
-        Serial.println("90OK");
+        Serial.println("CH90OK");
 
     }else if (data == 'I') {
         digitalWrite(10, HIGH);
-        Serial.println("101OK");
+        Serial.println("CH101OK");
 
     }else if (data == 'i'){
         digitalWrite(10, LOW);
-        Serial.println("100OK");
+        Serial.println("CH100OK");
 
     }else if (data == 'J') {
 
         digitalWrite(11, HIGH);
-        Serial.println("111OK");
+        Serial.println("CH111OK");
 
     }else if (data == 'j'){
 
         digitalWrite(11, LOW);
-        Serial.println("110OK");
+        Serial.println("CH110OK");
 
     }else if (data == 'K') {
         digitalWrite(12, HIGH);
-        Serial.println("121OK");
+        Serial.println("CH121OK");
 
     }else if (data == 'k'){
         digitalWrite(12, LOW);
-        Serial.println("120OK");
+        Serial.println("CH120OK");
 
     }else if (data == 'L') {
         digitalWrite(13, HIGH);
-        Serial.println("131OK");
+        Serial.println("CH131OK");
 
     }else if (data == 'l'){
         digitalWrite(13, LOW);
-        Serial.println("130OK");
+        Serial.println("CH130OK");
 
     }else if (data == 'O'){
         float voltage_values[NUM_AIN_CHANNELS];  // 存放电压值的数组
@@ -203,7 +203,7 @@ void loop() {
         digitalWrite(4, HIGH);
         Serial.println("CH7OK");
 
-    }else if ( data == 'AT'){
+    }else if ( data == 'Z'){
         Serial.println("OK");
     }
 }
