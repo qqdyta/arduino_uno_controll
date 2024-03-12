@@ -18,9 +18,6 @@ const int AIN_pins[NUM_AIN_CHANNELS] = {AIN0_pin, AIN1_pin, AIN2_pin, AIN3_pin, 
 
 void setup() {
     Serial.begin(115200);
-
-    pinMode(0, OUTPUT);
-    pinMode(1, OUTPUT);
     pinMode(2, OUTPUT);
     pinMode(3, OUTPUT);
     pinMode(4, OUTPUT);
@@ -32,6 +29,7 @@ void setup() {
     pinMode(10, OUTPUT);
     pinMode(11, OUTPUT);
     pinMode(12, OUTPUT);
+    pinMode(13, OUTPUT);
     for (int i = 0; i < numChannels; i++) {
         sumValues[i] = 0;
     }
@@ -43,117 +41,102 @@ void loop() {
 
 
     if (data == 'A') {
-        digitalWrite(0, HIGH);
-        Serial.println("CH01OK");
-
-    }else if (data == 'a'){
-        digitalWrite(0, LOW);
-        Serial.println("CH00OK");
-
-    }else if (data == 'B') {
-        digitalWrite(1, HIGH);
-        Serial.println('CH11OK');
-
-    }else if (data == 'b'){
-        digitalWrite(1, LOW);
-        Serial.println("CH10OK");
-
-    }else if (data == 'C') {
         digitalWrite(2, HIGH);
         Serial.println("CH21OK");
 
-    }else if (data == 'c'){
+    }else if (data == 'a'){
         digitalWrite(2, LOW);
         Serial.println("CH20OK");
 
-    }else if (data == 'D') {
+    }else if (data == 'B') {
         digitalWrite(3, HIGH);
-        Serial.println("31OK");
+        Serial.println("CH31OK");
+
+    }else if (data == 'b'){
+        digitalWrite(3, LOW);
+        Serial.println("CH30OK");
+
+    }else if (data == 'C') {
+        digitalWrite(4, HIGH);
+        Serial.println("CH41OK");
+
+    }else if (data == 'c'){
+        digitalWrite(4, LOW);
+        Serial.println("CH40OK");
+
+    }else if (data == 'D') {
+        digitalWrite(5, HIGH);
+        Serial.println("CH51OK");
 
     }else if (data == 'd'){
-        digitalWrite(3, LOW);
-        Serial.println("30OK");
+        digitalWrite(5, LOW);
+        Serial.println("CH50OK");
 
     }else if (data == 'E') {
-        digitalWrite(4, HIGH);
-        Serial.println("41OK");
+        digitalWrite(6, HIGH);
+        Serial.println("CH61OK");
 
     }else if (data == 'e'){
-        digitalWrite(4, LOW);
-        Serial.println("40OK");
+        digitalWrite(6, LOW);
+        Serial.println("CH60OK");
 
     }else if (data == 'F') {
-        digitalWrite(5, HIGH);
-        Serial.println("51OK");
+        digitalWrite(7, HIGH);
+        Serial.println("CH71OK");
 
     }else if (data == 'f'){
-        digitalWrite(5, LOW);
-        Serial.println("50OK");
+        digitalWrite(7, LOW);
+        Serial.println("CH70OK");
 
     }else if (data == 'G') {
-        digitalWrite(6, HIGH);
-        Serial.println("61OK");
+        digitalWrite(8, HIGH);
+        Serial.println("CH81OK");
 
     }else if (data == 'g'){
-        digitalWrite(6, LOW);
-        Serial.println("60OK");
+        digitalWrite(8, LOW);
+        Serial.println("CH80OK");
 
     }else if (data == 'H') {
-        digitalWrite(7, HIGH);
-        Serial.println("71OK");
+        digitalWrite(9, HIGH);
+        Serial.println("CH91OK");
 
     }else if (data == 'h'){
-        digitalWrite(7, LOW);
-        Serial.println("70OK");
+        digitalWrite(9, LOW);
+        Serial.println("CH90OK");
 
     }else if (data == 'I') {
-        digitalWrite(8, HIGH);
-        Serial.println("81OK");
+        digitalWrite(10, HIGH);
+        Serial.println("CH101OK");
 
     }else if (data == 'i'){
-        digitalWrite(8, LOW);
-        Serial.println("80OK");
+        digitalWrite(10, LOW);
+        Serial.println("CH100OK");
 
     }else if (data == 'J') {
 
-        digitalWrite(9, HIGH);
-        Serial.println("91OK");
+        digitalWrite(11, HIGH);
+        Serial.println("CH111OK");
 
     }else if (data == 'j'){
 
-        digitalWrite(9, LOW);
-        Serial.println("90OK");
+        digitalWrite(11, LOW);
+        Serial.println("CH110OK");
 
     }else if (data == 'K') {
-        digitalWrite(10, HIGH);
-        Serial.println("101OK");
+        digitalWrite(12, HIGH);
+        Serial.println("CH121OK");
 
     }else if (data == 'k'){
-        digitalWrite(10, LOW);
-        Serial.println("100OK");
+        digitalWrite(12, LOW);
+        Serial.println("CH120OK");
 
     }else if (data == 'L') {
-        digitalWrite(11, HIGH);
-        Serial.println("111OK");
+        digitalWrite(13, HIGH);
+        Serial.println("CH131OK");
 
     }else if (data == 'l'){
-        digitalWrite(11, LOW);
-        Serial.println("110OK");
-
-    }else if (data == 'M') {
-        digitalWrite(12, HIGH);
-        Serial.println("121OK");
-
-    }else if (data == 'm'){
-        digitalWrite(12, LOW);
-        Serial.println("120OK");
-    }else if (data == 'N') {
-        digitalWrite(13, HIGH);
-        Serial.println("OK");
-
-    }else if (data == 'n'){
         digitalWrite(13, LOW);
-        Serial.println("OK");
+        Serial.println("CH130OK");
 
     }else if (data == 'O'){
         float voltage_values[NUM_AIN_CHANNELS];  // 存放电压值的数组
@@ -164,7 +147,6 @@ void loop() {
             float voltage = (float)raw_value * (5.0 / 1023.0);  // 将原始数值转换为电压值
             voltage_values[i] = voltage;  // 将电压值存放到数组中
         }
-
         // 将电压值按JSON格式输出
         StaticJsonDocument<128> doc;
         for (int i = 0; i < NUM_AIN_CHANNELS; i++) {
@@ -221,6 +203,8 @@ void loop() {
         digitalWrite(4, HIGH);
         Serial.println("CH7OK");
 
+    }else if ( data == 'Z'){
+        Serial.println("OK");
     }
 }
 
