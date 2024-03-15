@@ -14,7 +14,9 @@ const int AIN4_pin = A4;
 const int AIN5_pin = A5;
 #define NUM_AIN_CHANNELS 6  // 定义需要采集的模拟输入通道数量
 
+
 const int AIN_pins[NUM_AIN_CHANNELS] = {AIN0_pin, AIN1_pin, AIN2_pin, AIN3_pin, AIN4_pin, AIN5_pin};
+
 
 void setup() {
     Serial.begin(115200);
@@ -38,7 +40,6 @@ void setup() {
 void loop() {
 
     char data = Serial.read();
-
 
     if (data == 'A') {
         digitalWrite(2, HIGH);
